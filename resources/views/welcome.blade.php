@@ -9,11 +9,21 @@
     @vite(['./resources/js/parallax.js'])
 </head>
 <body>
-    <div id="scene">
-        <h1 data-depth="0.2" style="color: red;">Layer 1 - Depth 0.2</h1>
-        <h1 data-depth="0.4" style="color: green;">Layer 2 - Depth 0.4</h1>
-        <h1 data-depth="1.2" style="color: blue;">Layer 3 - Depth 0.6</h1>
+    <header>
+    
+        <!-- <img class="logo-header" src="{{ asset('img/macinc.png') }}"> -->
+        <h1> < / > PORTFOLIO</h1>
+        <div class="header-right">
+            <a href="/">Home</a>
+            <a href="/">About me</a>
+            <a href="/">Projects</a>
+            <a href="/">Social</a>
+        </div>
+
+    </header>
+    <div class="my-name" id="scene">
+        <h1 data-depth="0.15">LEBRUMENT</h1>
+        <h1 data-depth="0.1">ALAN</h1>
     </div>
-    <h1 class="my-name">Alan</h1>
 </body>
 </html>

@@ -1,19 +1,44 @@
 .my-name{
-    font-size: 100px;
+    margin-left: 3vw;
+    display: flex;
+    font-size: 50px;
+    padding-top: 10vh;
 }
 
-#scene {
-    position: relative;
-    width: 100%;
-    height: 500px;
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     overflow: hidden;
+    height: 20vh;
+    text-align: center;
+    font-size: 30px;
 }
 
-#scene h1 {
-    position: absolute;
-    font-size: 3rem;
+header h1{
+    float: left;
+    margin-left: 2vw;
+}
+
+/* header img{
+    max-height: 50%;
+    max-width: auto; 
+    object-fit: contain;
+} */
+
+.header-right{
+    float: right;
+}   
+
+.header-right a{
+    color: white;
+    text-decoration: none;
+    margin: 1em;
     text-align: center;
-    width: 100%;
-    top: 50%; 
-    transform: translateY(-50%);
+}
+
+
+
+.header-right:hover{
+    cursor: pointer;
 }
