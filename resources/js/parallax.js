@@ -1,8 +1,7 @@
 import Parallax from 'parallax-js';
-document.addEventListener('DOMContentLoaded', () => {
-    const scene = document.getElementById('scene');
-    if (scene) {
-
-        new Parallax(scene);
-    }
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene, {
+    relativeInput: true
 });
+
+parallaxInstance.friction(0.2, 0.2);

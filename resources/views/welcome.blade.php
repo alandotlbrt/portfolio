@@ -7,6 +7,7 @@
     @vite(['./resources/css/global.css'])
     @vite(['./resources/css/index.css'])
     @vite(['./resources/js/parallax.js'])
+    @vite(['./resources/js/carousel.js'])
 </head>
 <body>
     <header>
@@ -19,11 +20,12 @@
             <a href="/">Projects</a>
             <a href="/">Social</a>
         </div>
+         
 
     </header>
-    <div class="my-name" id="scene">
-        <h1 data-depth="0.15">LEBRUMENT</h1>
-        <h1 data-depth="0.1">ALAN</h1>
+    <div id="scene">
+        <h1 id="name" data-depth="0.1">Alan<span id="carousel"></span><span class="input-cursor"></span></h1> 
     </div>
+
 </body>
 </html>

@@ -1,9 +1,21 @@
-.my-name{
-    margin-left: 3vw;
-    display: flex;
-    font-size: 50px;
-    padding-top: 10vh;
+#scene{
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+
 }
+
+
+#name{
+    font-size: 12vh;
+    margin-left: 4vw;
+}
+
+#surname{
+    margin-top: 10vh;
+    font-size: 80px;
+}
+
 
 header {
     display: flex;
@@ -20,12 +32,6 @@ header h1{
     margin-left: 2vw;
 }
 
-/* header img{
-    max-height: 50%;
-    max-width: auto; 
-    object-fit: contain;
-} */
-
 .header-right{
     float: right;
 }   
@@ -38,7 +44,9 @@ header h1{
 }
 
 
-
 .header-right:hover{
     cursor: pointer;
 }
+
+
+
