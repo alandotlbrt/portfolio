@@ -2,9 +2,9 @@
 
 
 const carouselText = [
-    { text: " LEBRUMENT", color: "red" },
-    { text: "'s Portfolio", color: "orange" },
-    { text: "'s Website", color: "yellow" }
+    { text: " LEBRUMENT", color: "#a92475" },
+    { text: "'s Portfolio", color: "#4b796e" },
+    { text: "'s Website", color: "#ffc501" }
 ];
 
 

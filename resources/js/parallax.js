@@ -1,7 +1,12 @@
 import Parallax from 'parallax-js';
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene, {
+
+
+var scene_galaxie = document.getElementById('galaxie');
+var parallaxInstance_galaxie = new Parallax(scene_galaxie, {
     relativeInput: true
 });
 
-parallaxInstance.friction(0.2, 0.2);
+parallaxInstance_galaxie.friction(0.1, 0.1);
+parallaxInstance_galaxie.limit(40, 40);
+ 
+
