@@ -43,7 +43,7 @@
                     <img src="{{ asset('img/go.png') }}" alt="Golang"> Golang
                 </a>.
             </p>
-            <iframe class="video-projects"src="https://www.youtube.com/watch?v=M4JPMvEHS8E"></iframe>
+            <iframe class="video-projects" src="https://www.youtube.com/embed/M4JPMvEHS8E?si=TbtPsRgUg4b-Z_wY"></iframe>
         <div>
         <div class="project-div">
             <div class="horizontal" style="gap:10px">
