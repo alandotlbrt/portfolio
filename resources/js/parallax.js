@@ -7,6 +7,6 @@ var parallaxInstance_galaxie = new Parallax(scene_galaxie, {
 });
 
 parallaxInstance_galaxie.friction(0.1, 0.1);
-parallaxInstance_galaxie.limit(40, 40);
+parallaxInstance_galaxie.limit(30, 20);
  
 

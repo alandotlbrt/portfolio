@@ -2,9 +2,9 @@
 
 
 const carouselText = [
-    { text: " LEBRUMENT", color: "#a92475" },
-    { text: "'s Portfolio", color: "#4b796e" },
-    { text: "'s Website", color: "#ffc501" }
+    { text: " Lebrument.", color: "#a92475" },
+    { text: "'s portfolio.", color: "#4b796e" },
+    { text: "'s website.", color: "#ffc501" }
 ];
 
 
@@ -51,8 +51,14 @@ async function carousel(carouselList, eleRef) {
     }
 }
 
+if (location.href.split("/")[3] == "projects"){
+    updateFontColor("#carousel", "#3363a2");
+    typeSentence("'s Projects.", "#carousel", 100);
+} else {
+    
+    carousel(carouselText, "#carousel");
+}
 
-carousel(carouselText, "#carousel");
 
 function updateFontColor(eleRef, color) {
     const element = document.querySelector(eleRef);
