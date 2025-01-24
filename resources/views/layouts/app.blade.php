@@ -23,7 +23,12 @@
             <a href="/">Home</a>
             <a href="#about">About me</a>
             <a href="/projects">Projects</a>
-            <a href="#social">Social</a>
+            <a href="https://github.com/alandotlbrt/" class="logo-header-social git">
+                <img src="{{ asset('img/git.png') }} "alt="Github">
+            </a>
+            <a href="https://www.linkedin.com" class="logo-header-social linkedin">
+                <img src="{{ asset('img/linkedin.png') }} "alt="Github">
+            </a>
         </div>
         </div>
     </header> 

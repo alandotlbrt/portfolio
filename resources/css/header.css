@@ -52,10 +52,13 @@ header svg:hover{
 .header-right a:hover{
     color: rgb(25, 25, 25);
     background-color: rgb(255, 255, 255);
-
     transition: 0.3s ease-in-out;
 }
 
+
+.header-right a.logo-header-social.git{
+    background-color: rgba(245, 245, 220, 0);
+}
 
 .header-right:hover{
     cursor: pointer;
@@ -70,6 +73,23 @@ header svg:hover{
 .logo-header{
     width: 100vw;
     height: 100vh;
+}
+
+
+.logo-header-social{
+    color: grey;
+    cursor: pointer;
+    margin: 10px;
+    border: 1px solid;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.logo-header-social.git img{
+    width: 50px;
+}
+
+.logo-header-social.linkedin img{
+    width: 25px;
 }
 
 
