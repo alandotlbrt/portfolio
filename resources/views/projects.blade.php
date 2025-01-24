@@ -27,7 +27,8 @@
                     <img src="{{ asset('img/go.png') }}" alt="Golang"> Golang
                 </a>.
             </p>
-            <iframe class="video-projects"src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            <img class="img-social" src="{{ asset('img/plume.png') }}" alt="Figma"> 
+           <!--  <iframe class="video-projects"src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
         </div>
         <div class="project-div">
             <div class="horizontal" style="gap:10px">
