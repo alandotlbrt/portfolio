@@ -22,7 +22,7 @@
 
         <div class="header-right">
             <a href="/">Home</a>
-            <a href="#about">About me</a>
+            <a href="/me">About me</a>
             <a href="/projects">Projects</a>
             <a href="/contact">Contact</a>
         </div>

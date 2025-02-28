@@ -54,9 +54,12 @@ async function carousel(carouselList, eleRef) {
 if (location.href.split("/")[3] == "projects"){
     updateFontColor("#carousel", "#3363a2");
     typeSentence("'s Projects.", "#carousel", 100);
+} else if ( location.href.split("/")[3] == "me"){
+    updateFontColor("#carousel", "rgb(139, 47, 197)");
+    typeSentence("'s life.", "#carousel", 100);
 } else {
-    
     carousel(carouselText, "#carousel");
+
 }
 
 
