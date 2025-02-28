@@ -8,8 +8,9 @@
     @vite(['./resources/css/header.css'])
     @vite(['./resources/js/carousel.js'])
     @vite(['./resources/js/parallax.js'])
+   
+    @yield('scripts')
     @yield('css')
-
 </head>
 <body>
     <header>
@@ -25,6 +26,7 @@
             <a href="/projects">Projects</a>
             <a href="/contact">Contact</a>
         </div>
+        
         </div>
     </header> 
 
