@@ -34,9 +34,7 @@
         @yield('content')
     </main>
 
-    <footer>
-        <p>© {{ date('Y') }} - Alan's Portfolio</p>
-    </footer>
+   
     
 </body>
 </html>
