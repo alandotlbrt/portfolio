@@ -1,13 +1,11 @@
 body{
     background: url('../img/6195005.jpg') no-repeat center center fixed;
     background-size: cover;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(80px);
     z-index: -1;
-
 }
 
 .project-div{
-
     margin-left: 10vw;
     margin-top: 5vh;
     display: flex;

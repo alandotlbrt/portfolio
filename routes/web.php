@@ -15,3 +15,7 @@ Route::get('/projects', function () {
 Route::get('/me', function() {
     return view("me");
 });
+
+Route::get('/contact', function() {
+    return view("contact");
+});

@@ -7,29 +7,73 @@ body{
 
 }
 
+.container-about{
+    display: flex;
+    flex-direction: column;
+}
 
-.first-title {
+.title-about{
     font-size: calc(20px + 2vh);
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    margin-left: 6vw;
     font-weight: 200;
-
 }
 
-.first-title h1{
-    font-weight: 300;
 
+.title-about h1{
+    font-weight: 550;
 }
 
-.first-title p{
-    margin-left: 2vw;
-    font-weight: 200;
+.title-about p{
+    margin-left: 0.5vw;
+    font-weight: 420;
     margin-top: -2px;
     color: rgb(139, 47, 197);
 }
 
-.studyat{
-    margin-top: 10vh;
+.left-title {
+    margin-right: auto;
+    margin-left: 4vw;
+}
+
+.right-title{
+    margin-left: auto;
+    margin-right: 4vw;
+}
+
+.Apprentice-dev{
+    width: 50vw;
+    font-size: 25px;
+    margin-top: 1.5vh;
+}
+
+.school{
+    width: 40vw;
+    font-size: 25px;
+    margin-top: 1.5vh;
+}
+
+
+.end{
+    margin-bottom: 15vh;
+}
+
+
+@media screen and (max-width:830px) {
+    .container-about{
+        justify-content: center;
+        align-items: center;
+    }
+    .right-title{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .left-title{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .title-about{
+        max-width: 300px;
+    }
 }

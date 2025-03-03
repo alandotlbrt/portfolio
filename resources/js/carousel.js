@@ -57,9 +57,11 @@ if (location.href.split("/")[3] == "projects"){
 } else if ( location.href.split("/")[3] == "me"){
     updateFontColor("#carousel", "rgb(139, 47, 197)");
     typeSentence("'s life.", "#carousel", 100);
+} else if( location.href.split("/")[3] == "contact"){
+    updateFontColor("#carousel", "rgb(151, 51, 51)");
+    typeSentence("'s links.", "#carousel", 100);
 } else {
     carousel(carouselText, "#carousel");
-
 }
 
 
