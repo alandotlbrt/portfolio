@@ -3,7 +3,7 @@ name: Deploy Laravel on Hostinger
 on:
   push:
     branches:
-      - main  # Changez si votre branche de production est différente
+      - main  
 
 jobs:
   deploy:
