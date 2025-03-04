@@ -1,0 +1,37 @@
+name: Deploy Laravel on Hostinger
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: recup github code
+        uses: actions/checkout@v4
+
+      - name: Configurer SSH pour Hostinger
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ton-domaine.hostingersite.com >> ~/.ssh/known_hosts
+
+      - name: deploiement sur hostinger
+        run: |
+          ssh u446710160@ton-domaine.hostingersite.com << 'EOF'
+          cd /home/u446710160/domains/ton-domaine.hostingersite.com
+          git pull origin main
+          composer install --no-dev --optimize-autoloader
+          php artisan config:clear && php artisan cache:clear
+          php artisan migrate --force
+          npm install
+          npm run build
+          exit
+          EOF
+
+      - name: good ✅
+        run: echo "gg wp alan"

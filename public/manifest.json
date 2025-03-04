@@ -1,0 +1,68 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-l0sNRNKZ.js",
+    "name": "app",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/contact.css": {
+    "file": "assets/contact-C7uaQxuh.css",
+    "src": "resources/css/contact.css",
+    "isEntry": true
+  },
+  "resources/css/global.css": {
+    "file": "assets/global-aohhlWSe.css",
+    "src": "resources/css/global.css",
+    "isEntry": true
+  },
+  "resources/css/header.css": {
+    "file": "assets/header-DoPcH3sZ.css",
+    "src": "resources/css/header.css",
+    "isEntry": true
+  },
+  "resources/css/home.css": {
+    "file": "assets/home-CpCcp353.css",
+    "src": "resources/css/home.css",
+    "isEntry": true
+  },
+  "resources/css/me.css": {
+    "file": "assets/me-CK3QmFEi.css",
+    "src": "resources/css/me.css",
+    "isEntry": true
+  },
+  "resources/img/6195005.jpg": {
+    "file": "assets/6195005-BShY9DVB.jpg",
+    "src": "resources/img/6195005.jpg"
+  },
+  "resources/img/galaxie.jpg": {
+    "file": "assets/galaxie-T-FCN-CP.jpg",
+    "src": "resources/img/galaxie.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Dom6kGOG.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-DLGETtgI.css"
+    ],
+    "assets": [
+      "assets/plume-CI4QBjr8.png",
+      "assets/figma1-DtFLHT8j.png",
+      "assets/find-alphabet-DRSDp3BO.png",
+      "assets/6195005-BShY9DVB.jpg"
+    ]
+  },
+  "resources/js/components/figma1.png": {
+    "file": "assets/figma1-DtFLHT8j.png",
+    "src": "resources/js/components/figma1.png"
+  },
+  "resources/js/components/find-alphabet.png": {
+    "file": "assets/find-alphabet-DRSDp3BO.png",
+    "src": "resources/js/components/find-alphabet.png"
+  },
+  "resources/js/components/plume.png": {
+    "file": "assets/plume-CI4QBjr8.png",
+    "src": "resources/js/components/plume.png"
+  }
+}

@@ -19,3 +19,7 @@ Route::get('/me', function() {
 Route::get('/contact', function() {
     return view("contact");
 });
+
+Route::fallback(function () {
+    return redirect('/');
+});

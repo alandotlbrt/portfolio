@@ -3,11 +3,11 @@
 @section('title', 'Contact')
 
 @section('css')
-    @vite(['./resources/css/contact.css'])
+    @vite(['resources/css/contact.css'])
 @endsection
 
 @section('scripts')
-    @vite(['./resources/js/app.js'])
+    @vite(['resources/js/app.js'])
 @endsection
 
 @section('content')

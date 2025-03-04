@@ -3,7 +3,7 @@
 @section('title', 'Me')
 
 @section('css')
-    @vite(['./resources/css/me.css'])
+    @vite(['resources/css/me.css'])
 @endsection
 
 @section('content')
@@ -56,7 +56,7 @@
         </div>
     
         
-        
+    
     </div>
     
 @endsection

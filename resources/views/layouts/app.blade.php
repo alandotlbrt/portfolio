@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'global')</title>
-    @vite(['./resources/css/global.css'])
-    @vite(['./resources/css/header.css'])
-    @vite(['./resources/js/carousel.js'])
-    @vite(['./resources/js/parallax.js'])
+    @vite(['resources/css/global.css'])
+    @vite(['resources/css/header.css'])
+    @vite(['resources/js/carousel.js'])
+    @vite(['resources/js/parallax.js'])
    
     @yield('scripts')
     @yield('css')
