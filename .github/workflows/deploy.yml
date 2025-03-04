@@ -34,7 +34,9 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no -p 65002 u446710160@147.93.54.2 << 'EOF'
           cd /home/u446710160/domains/sienna-flamingo-340500.hostingersite.com || exit 1
-          git pull origin main || exit 1
+          git reset --hard origin/refont/css || exit 1
+          git clean -fd || exit 1
+          git pull origin refont/css || exit 1
           composer install --no-dev --optimize-autoloader || exit 1
           php artisan config:clear && php artisan cache:clear || exit 1
           php artisan migrate --force || exit 1
