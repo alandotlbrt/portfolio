@@ -13,18 +13,17 @@ jobs:
       - name: Récupérer le code depuis GitHub
         uses: actions/checkout@v4
 
-     - name: Configurer SSH pour Hostinger
+      - name: Configurer SSH pour Hostinger
         run: |
-          mkdir -p $HOME/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_rsa
-          chmod 600 $HOME/.ssh/id_rsa
-          ssh-keyscan -H 147.93.54.2 >> $HOME/.ssh/known_hosts
-        shell: bash
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 147.93.54.2 >> ~/.ssh/known_hosts
 
-      - name: Déployer sur Hostinger
+      - name: Déployer sur Hostinger via SSH
         run: |
-          ssh -o StrictHostKeyChecking=no -p 65002 u446710160@147.93.54.2 << 'EOF'
-          cd /home/u446710160/domains/sienna-flamingo-340500.hostingersite.com
+          ssh u446710160@ton-domaine.hostingersite.com << 'EOF'
+          cd /home/u446710160/domains/ton-domaine.hostingersite.com
           git pull origin main
           composer install --no-dev --optimize-autoloader
           php artisan config:clear && php artisan cache:clear
@@ -33,8 +32,6 @@ jobs:
           npm run build
           exit
           EOF
-        shell: bash
-
 
       - name: Terminé ✅
         run: echo "Déploiement réussi sur Hostinger ! 🎉"
