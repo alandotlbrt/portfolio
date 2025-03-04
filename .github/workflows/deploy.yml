@@ -10,29 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: recup github code
+      - name: Récupérer le code depuis GitHub
         uses: actions/checkout@v4
 
       - name: Configurer SSH pour Hostinger
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H sienna-flamingo-340500.hostingersite.com >> ~/.ssh/known_hosts
+          mkdir -p $HOME/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_rsa
+          chmod 600 $HOME/.ssh/id_rsa
+          ssh-keyscan -H sienna-flamingo-340500.hostingersite.com >> $HOME/.ssh/known_hosts
+        shell: bash
 
-
-      - name: deploiement sur hostinger
+      - name: Vérifier la connexion SSH
         run: |
-          ssh u446710160@ton-domaine.hostingersite.com << 'EOF'
-          cd /home/u446710160/domains/ton-domaine.hostingersite.com
-          git pull origin main
-          composer install --no-dev --optimize-autoloader
-          php artisan config:clear && php artisan cache:clear
-          php artisan migrate --force
-          npm install
-          npm run build
+          ssh -o StrictHostKeyChecking=no u446710160@sienna-flamingo-340500.hostingersite.com "echo 'Connexion SSH réussie !'"
+        shell: bash
+
+      - name: Déploiement sur Hostinger
+        run: |
+          ssh -o StrictHostKeyChecking=no u446710160@sienna-flamingo-340500.hostingersite.com << 'EOF'
+          cd /home/u446710160/domains/sienna-flamingo-340500.hostingersite.com || exit 1
+          git pull origin main || exit 1
+          composer install --no-dev --optimize-autoloader || exit 1
+          php artisan config:clear && php artisan cache:clear || exit 1
+          php artisan migrate --force || exit 1
+          npm install || exit 1
+          npm run build || exit 1
           exit
           EOF
+        shell: bash
 
-      - name: good ✅
-        run: echo "gg wp alan"
+      - name: Good ✅
+        run: echo "Déploiement terminé avec succès ! 🎉"
