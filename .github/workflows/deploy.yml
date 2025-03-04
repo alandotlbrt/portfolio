@@ -15,11 +15,12 @@ jobs:
 
       - name: Configurer SSH pour Hostinger
         run: |
-          mkdir -p $HOME/.ssh
+          mkdir -vp $HOME/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_rsa
           chmod 600 $HOME/.ssh/id_rsa
           ssh-keyscan -H sienna-flamingo-340500.hostingersite.com >> $HOME/.ssh/known_hosts
         shell: bash
+
 
       - name: Vérifier la connexion SSH
         run: |
