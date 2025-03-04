@@ -18,7 +18,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ton-domaine.hostingersite.com >> ~/.ssh/known_hosts
+          ssh-keyscan -H https://sienna-flamingo-340500.hostingersite.com/>> ~/.ssh/known_hosts
 
       - name: deploiement sur hostinger
         run: |
