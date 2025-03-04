@@ -10,16 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Récupérer le code depuis GitHub
-        uses: actions/checkout@v4
-
       - name: Configurer SSH pour Hostinger
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 147.93.54.2 >> ~/.ssh/known_hosts
+          echo "Vérification du répertoire HOME : $HOME"
+          ls -la $HOME || echo "⚠️ Impossible d'accéder à HOME"
+          ls -la $HOME/.ssh || echo "⚠️ Dossier .ssh non trouvé, création en cours..."
+          
+          mkdir -p $HOME/.ssh || echo "⚠️ Échec de la création de ~/.ssh"
+          chmod 700 $HOME/.ssh || echo "⚠️ Échec de la modification des permissions de ~/.ssh"
+
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_rsa || echo "⚠️ Erreur d'écriture de la clé privée"
+          chmod 600 $HOME/.ssh/id_rsa || echo "⚠️ Échec de modification des permissions de id_rsa"
+
+          ssh-keyscan -H 147.93.54.2 >> $HOME/.ssh/known_hosts || echo "⚠️ Échec d'ajout de Hostinger aux known_hosts"
+          
+          echo "✅ Configuration SSH terminée avec succès."
         shell: bash
+
+      - name: Récupérer le code depuis GitHub
+        uses: actions/checkout@v4
 
       - name: Déployer sur Hostinger via SSH
         run: |
