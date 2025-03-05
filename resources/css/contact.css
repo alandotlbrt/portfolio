@@ -1,3 +1,14 @@
+
+body{
+    background: url('../../public/img/background2.jpg') no-repeat center center fixed;
+
+    background-size: cover;
+    backdrop-filter: blur(100px);
+    z-index: -1;
+
+}
+
+
 .container-contact{
     display: flex;
     flex-direction: column;
